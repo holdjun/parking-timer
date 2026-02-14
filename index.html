@@ -1,0 +1,48 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>停车计时器</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <main class="card">
+    <h1>停车计时器</h1>
+    <p class="sub">快速记录停车开始/结束时间并计算时长</p>
+
+    <section class="now">
+      <div>当前时间</div>
+      <div id="now" class="time">--:--:--</div>
+    </section>
+
+    <section class="actions">
+      <button id="startBtn" class="primary">开始计时</button>
+      <button id="stopBtn" class="ghost" disabled>结束计时</button>
+      <button id="resetBtn" class="ghost">重置</button>
+    </section>
+
+    <section class="status">
+      <div>开始时间：<span id="startTime">未开始</span></div>
+      <div>结束时间：<span id="endTime">未结束</span></div>
+      <div>已用时：<span id="duration">00:00:00</span></div>
+    </section>
+
+    <section class="save">
+      <button id="saveBtn" class="primary" disabled>保存记录</button>
+    </section>
+
+    <section class="history">
+      <h2>历史记录</h2>
+      <div id="historyList" class="list"></div>
+      <button id="clearHistoryBtn" class="ghost" disabled>清空历史</button>
+    </section>
+
+    <footer class="foot">
+      数据保存在本地浏览器中（localStorage）
+    </footer>
+  </main>
+
+  <script src="app.js"></script>
+</body>
+</html>
